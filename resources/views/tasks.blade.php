@@ -69,36 +69,39 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Task 1</td>
-                        <td>
-                            <form action="#" method="POST" class="d-inline">
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="fa fa-trash me-2"></i>Delete
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Task 2</td>
-                        <td>
-                            <form action="#" method="POST" class="d-inline">
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="fa fa-trash me-2"></i>Delete
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Task 3</td>
-                        <td>
-                            <form action="#" method="POST" class="d-inline">
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="fa fa-trash me-2"></i>Delete
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
+                    @foreach($tasks as $task)
+                        <tr>
+                            <td>{{$task->name}}</td>
+                            <td>
+                                <form action="#" method="POST" class="d-inline">
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fa fa-trash me-2"></i>Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+
+{{--                    <tr>--}}
+{{--                        <td>Task 2</td>--}}
+{{--                        <td>--}}
+{{--                            <form action="#" method="POST" class="d-inline">--}}
+{{--                                <button type="submit" class="btn btn-danger">--}}
+{{--                                    <i class="fa fa-trash me-2"></i>Delete--}}
+{{--                                </button>--}}
+{{--                            </form>--}}
+{{--                        </td>--}}
+{{--                    </tr>--}}
+{{--                    <tr>--}}
+{{--                        <td>Task 3</td>--}}
+{{--                        <td>--}}
+{{--                            <form action="#" method="POST" class="d-inline">--}}
+{{--                                <button type="submit" class="btn btn-danger">--}}
+{{--                                    <i class="fa fa-trash me-2"></i>Delete--}}
+{{--                                </button>--}}
+{{--                            </form>--}}
+{{--                        </td>--}}
+{{--                    </tr>--}}
                     </tbody>
                 </table>
             </div>
