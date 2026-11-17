@@ -45,3 +45,7 @@ Route::post('/delete/{id}', function ($id) {
 //     DB::table('tasks')->where(['id' => $id])->delete();
 //     return redirect('tasks');
 // });
+// Route::post('/delete/{id}', function ($id) {
+//     DB::table('tasks')->where(['id' => $id])->delete();
+//     return redirect('tasks');
+// });
