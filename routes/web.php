@@ -37,3 +37,7 @@ Route::post('/create', function () {
     DB::table('tasks')->insert(['name' => $task_name]);
     return redirect('tasks');
 });
+Route::post('/delete/{id}', function ($id) {
+    DB::table('tasks')->where(['id' => $id])->delete();
+    return redirect('tasks');
+});

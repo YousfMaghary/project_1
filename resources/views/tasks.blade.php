@@ -73,7 +73,8 @@
                         <tr>
                             <td>{{$task->name}}</td>
                             <td>
-                                <form action="#" method="POST" class="d-inline">
+                                <form action="/delete/{{$task->id}}" method="POST" class="d-inline">
+                                    @csrf
                                     <button type="submit" class="btn btn-danger">
                                         <i class="fa fa-trash me-2"></i>Delete
                                     </button>
