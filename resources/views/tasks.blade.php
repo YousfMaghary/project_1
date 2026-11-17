@@ -42,7 +42,7 @@
 
                     <div class="card-body">
                         <!-- update tasks Form -->
-                        <form action="{{url('update')}}" method="POST">
+                        <form action="{{ url('update') }}" method="POST">
                             @csrf
                             <input type="hidden" name="id" value="{{ $task->id }}">
                             <!-- Task Name -->
