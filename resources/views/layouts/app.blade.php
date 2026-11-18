@@ -192,6 +192,7 @@
                 <!-- Page Content -->
                 <div class="container-fluid">
                     @yield('content')
+                    @yield('usercontent')
                 </div>
 
             </div>

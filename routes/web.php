@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,16 +31,21 @@ Route::post('/about', function () {
 });
 
 
-Route::get('/tasks', [TaskController::class, 'index'] ) ;
+Route::get('/tasks', [TaskController::class, 'index']);
 
-Route::post('/create', [TaskController::class, 'create'] ) ;
+Route::post('/create', [TaskController::class, 'create']);
 
-Route::post('/delete/{id}',[TaskController::class, 'delete'] ) ;
+Route::post('/delete/{id}', [TaskController::class, 'delete']);
 
-Route::post('/edit/{id}',[TaskController::class, 'edit'] ) ;
+Route::post('/edit/{id}', [TaskController::class, 'edit']);
 
-Route::post('/update', [TaskController::class, 'update'] ) ;
+Route::post('/update', [TaskController::class, 'update']);
 
 Route::get('/app', function () {
     return view('layouts.app');
 });
+Route::get('/users', [UserController::class, 'index']);
+Route::post('/users/create', [UserController::class, 'create']);
+Route::post('/users/delete/{id}', [UserController::class, 'delete']);
+Route::get('/users/edit/{id}', [UserController::class, 'edit']);
+Route::post('/users/update', [UserController::class, 'update']);
