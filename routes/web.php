@@ -38,4 +38,8 @@ Route::post('/delete/{id}',[TaskController::class, 'delete'] ) ;
 
 Route::post('/edit/{id}',[TaskController::class, 'edit'] ) ;
 
-Route::post('/update', [TaskController::class, 'update'] ) ; 
+Route::post('/update', [TaskController::class, 'update'] ) ;
+
+Route::get('/app', function () {
+    return view('layouts.app');
+});
